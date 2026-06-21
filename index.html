@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="images/myphoto.jpg.jpg" alt="My Photo" width ="200">
+
+<h1>Welcome To My Portfolio!</h1>
+
+<h2 id="typing"></h2>
+
+<p>
+Neelam Chand's Personal Portfolio 
+Showcases Work In Web Development
+Showcasing Experiences And Potenial 
+Contributions To Impactful Solutions.
+</p>
+<p>
+    <b> Great Thanks For Visiting.</b> 
+
+</p>
+
+<div class="buttons">
+<a href="about.html" class="btn">About Me</a>
+<a href="portfolio.html" class="btn">Portfolio</a>
+<a href="resume.html" class ="btn">View Resume</a>
+</div>
+
+</div>
+
+<script>
+const text = "Frontend Developer";
+let i = 0;
+
+function typeWriter() {
+    if(i < text.length){
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter,100);
+    }
+}
+
+typeWriter();
+</script>
+
+</body>
+</html>

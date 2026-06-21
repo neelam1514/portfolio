@@ -1,0 +1,236 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+    padding:20px;
+}
+
+.container{
+    background:white;
+    width:90%;
+    max-width:900px;
+    margin: 50px auto;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.profile-img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #667eea;
+    margin-bottom:20px;
+}
+
+h1{
+    color:#333;
+    margin-bottom:15px;
+}
+
+h2{
+    color:#667eea;
+    margin:15px 0;
+}
+
+p{
+    color:#555;
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+.btn{
+    display:inline-block;
+    margin:10px;
+    padding:12px 25px;
+    background:#667eea;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#5563d8;
+    transform:translateY(-3px);
+}
+
+.project-card{
+    background:#fafafa;
+    border-radius:15px;
+    padding:20px;
+    margin-top:20px;
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:scale(1.02);
+}
+
+.project-img{
+    width:100%;
+    max-width:600px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.skill{
+    margin:20px 0;
+    text-align:left;
+}
+
+.skill span{
+    font-weight:600;
+}
+
+.about-img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+.project-page {
+    background: white;
+    width:80%;
+    max-width: 700px;
+    padding: 20px;
+    border-radius:12px;
+    font-family: Arial;
+}
+
+    /* Timeline Section Setup */
+    .timeline-section {
+      position: relative;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ffeef2 0%, #e6f7f4 100%);
+      padding: 60px 20px;
+      overflow: hidden;
+    }
+
+    /* Decorative Background Blobs */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(50px);
+      z-index: 0;
+      opacity: 0.5;
+    }
+    .blob-1 {
+      width: 140px;
+      height: 140px;
+      background-color: #b19ffb;
+      top: 10%;
+      left: 5%;
+    }
+    .blob-2 {
+      width: 160px;
+      height: 160px;
+      background-color: #ff9ebb;
+      bottom: 15%;
+      right: 5%;
+    }
+
+    /* Timeline Inner Container */
+    .timeline-container {
+      position: relative;
+      max-width: 650px;
+      margin: 0 auto;
+      padding-left: 35px; 
+      z-index: 1;
+    }
+
+    /* The Vertical Line */
+    .timeline-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 15px;
+      width: 2px;
+      background-color: #e24974; 
+    }
+
+    /* Timeline Entry Block */
+    .timeline-item {
+      position: relative;
+      margin-bottom: 45px;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Timeline Node Dots */
+    .timeline-dot {
+      position: absolute;
+      left: -25px; 
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #e24974;
+      box-shadow: 0 0 0 4px rgba(226, 73, 116, 0.2);
+    }
+
+    /* Text Formatting */
+    .timeline-date {
+      color: #e24974;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .timeline-title {
+      color: #1e293b;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+    }
+
+    .timeline-org {
+      color: #475569;
+      font-weight: 500;
+    }
+
+    .timeline-text {
+      color: #334155;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+@media(max-width:768px){
+
+    .container{
+        padding:20px;
+    }
+
+    .profile-img{
+        width:140px;
+        height:140px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    .btn{
+        display:block;
+        width:100%;
+        margin:10px 0;
+    }
+}

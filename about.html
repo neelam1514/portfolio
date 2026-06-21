@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- === TOP RIGHT DROPDOWN MENU === -->
+  <div class="custom-dropdown" style="position: absolute; top: 20px; right: 20px; z-index: 1000; font-family: sans-serif;">
+    <!-- The main action button -->
+    <button id="menuBtn" onclick="toggleDropdown(event)" style="background-color: #2563eb; color: white; padding: 10px 18px; border: none; border-radius: 25px; font-weight: 600; cursor: pointer; font-size: 1rem; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      Menu ☰
+    </button>
+    
+    <!-- The hidden menu options container -->
+    <div id="myDropdown" style="display: none; position: absolute; right: 0; top: 45px; background-color: white; min-width: 180px; box-shadow: 0px 8px 16px rgba(0,0,0,0.15); border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0;">
+      <a href="resume.pdf" download style="color: #334155; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.95rem; font-weight: 500; transition: background 0.2s;" onmouseover="this.style.backgroundColor='#f1f5f9'" onmouseout="this.style.backgroundColor='transparent'">Download Resume</a>
+      <a href="contact.html" style="color: #334155; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.95rem; font-weight: 500; transition: background 0.2s;" onmouseover="this.style.backgroundColor='#f1f5f9'" onmouseout="this.style.backgroundColor='transparent'">Contact Me</a>
+      <a href="index.html" style="color: #334155; padding: 12px 16px; text-decoration: none; display: block; font-size: 0.95rem; font-weight: 500; border-top: 1px solid #e2e8f0; transition: background 0.2s;" onmouseover="this.style.backgroundColor='#f1f5f9'" onmouseout="this.style.backgroundColor='transparent'">Back Home</a>
+    </div>
+  </div>
+<div class="container">
+<h1>About Me</h1>
+
+<!-- PROFILE IMAGE -->
+<img src="images/about.jpg.jpg" alt="My Photo" class="about-img">
+
+<p>
+Hello! I am Neelam Chand, a very passionate third year BTech student with a deep interest in web development.
+I completed my highschool from Army Public School under the CBSE Board, where my enthusiasm for coding and web 
+design first began to flourish.
+</p>
+
+<p>
+<b> Skills: </b><br>
+Programming Language(Basics): Python , Java, C, C++
+<br>
+Frontend Development: Html5,CSS3,JavaScript,React.js
+<br>
+Database: Sql, MySQL<br>
+Version Control: Git, GitHub <br>
+Deployment & Hosting: Vercel <br>
+</p>
+<section>
+<h2> Education</h2>
+<div id="education" class="timeline-container active">
+  
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <div class="timeline-date">2021 - 2022</div>
+      <h3 class="timeline-title">Matriculation <span class="timeline-org">| Army Public School</span></h3>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <div class="timeline-date">2023 – 2024</div>
+      <h3 class="timeline-title">Intermediate <span class="timeline-org">| Army Public School</span></h3>
+      <p class="timeline-text">
+        With PCM (Physics, Chemistry, Mathematics)
+      </p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <div class="timeline-date">2024 – present</div>
+      <h3 class="timeline-title">BTech <span class="timeline-org">| Uttaranchal University</span></h3>
+      <p class="timeline-text">
+        
+      </p>
+    </div>
+  </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">June 2026 – present</div>
+          <h3 class="timeline-title"> <span class="timeline-org"></span></h3>
+          <p class="timeline-text">
+            Built a Resume Builder Web App using HTML, CSS , and JavaScript , deployed with GitHub and Vercel.
+          </p>
+        </div>
+      </div>
+
+    </div>
+</div>
+</section>
+<br><br>
+<script>
+  // Simplified Dropdown Toggle
+  function toggleDropdown(event) {
+    event.stopPropagation(); // Stops page click events from firing simultaneously
+    const dropdown = document.getElementById("myDropdown");
+    
+    if (dropdown.style.display === "none" || dropdown.style.display === "") {
+      dropdown.style.display = "block";
+    } else {
+      dropdown.style.display = "none";
+    }
+  }
+
+  // Closes the menu frame instantly if you click anywhere else on the browser page
+  document.addEventListener("click", function(event) {
+    const dropdown = document.getElementById("myDropdown");
+    const menuBtn = document.getElementById("menuBtn");
+    
+    if (dropdown && event.target !== menuBtn) {
+      dropdown.style.display = "none";
+    }
+  });
+
+  // Timeline Switcher Script
+  function switchTl(event, index) {
+    const eduBtn = document.getElementById('eduBtn');
+    const expBtn = document.getElementById('expBtn');
+    const track = document.getElementById('tlTrack');
+    
+    if (index === 0) {
+      eduBtn.style.color = '#e24974';
+      eduBtn.style.borderBottom = '3px solid #e24974';
+      expBtn.style.color = '#94a3b8';
+      expBtn.style.borderBottom = '3px solid transparent';
+      track.style.transform = 'translateX(0%)';
+    } else {
+      expBtn.style.color = '#e24974';
+      expBtn.style.borderBottom = '3px solid #e24974';
+      eduBtn.style.color = '#94a3b8';
+      eduBtn.style.borderBottom = '3px solid transparent';
+      track.style.transform = 'translateX(-50%)';
+    }
+  }
+</script>
+
+</body>
+</html>
